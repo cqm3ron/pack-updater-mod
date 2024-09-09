@@ -38,14 +38,18 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v4
 
+      - name: generate version tag
+        id: generate_tag
+        run: echo "RELEASE_TAG=release-$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+
       - name: create release
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: ${{ env.RELEASE_TAG }}
+          release_name: Release ${{ env.RELEASE_TAG }}
           body: |
-            Release description for ${{ github.sha }}
+            Release description for ${{ env.RELEASE_TAG }}
           draft: false
           prerelease: false
         env:
