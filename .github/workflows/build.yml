@@ -38,6 +38,14 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v4
 
+      - name: download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Artifacts
+
+      - name: list files
+        run: ls -R build/libs
+
       - name: generate version tag
         id: generate_tag
         run: echo "RELEASE_TAG=release-$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
