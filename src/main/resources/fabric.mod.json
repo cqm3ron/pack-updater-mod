@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "beaconcraftupdater",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "BeaconCraft Resource Pack Updater",
 	"description": "Automatically downloads and applies the latest version of the texture pack.",
 	"authors": [
 		"Me!"
