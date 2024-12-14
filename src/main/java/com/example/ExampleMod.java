@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 
 public class ExampleMod implements ModInitializer {
 
-    private static final String DOWNLOAD_URL = "http://mcpack.cqmeron.online/";
+    private static final String DOWNLOAD_URL = "http://mcpack.cqmeron.uk/";
     private static final String PACK_NAME = "BeaconPack_Latest.zip";
     private static final String OPTIONS_FILE = "options.txt";
 
